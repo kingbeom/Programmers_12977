@@ -5,17 +5,13 @@ def solution(nums):
     sol=0
     for i in lst:
         a=sum(i)
-        if a%2==0:
-            continue
-        answer.append(a)
-    for i in answer:
-        chk=[]
-        cnt=0
+        chk = []
+        cnt = 0
         while True:
             cnt+=1
-            if cnt==i+1:
+            if cnt==a+1:
                 break
-            if i%cnt==0:
+            if a%cnt==0:
                 chk.append(cnt)
         if len(chk)==2:
             sol+=1
